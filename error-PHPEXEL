@@ -1,0 +1,8 @@
+11
+
+In the PHPExcel file "DefaultValueBinder.php", replace this line 82:
+
+} elseif ($pValue[0] === '=' && strlen($pValue) > 1) {
+with the following:
+
+} elseif (0 === strpos($pValue, '=') && strlen($pValue) > 1) {
